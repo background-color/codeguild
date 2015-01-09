@@ -1,10 +1,6 @@
 __author__ = 'root'
 
-book = {name: {in_name: "value",
-                phone: "value",
-                "alt_phone": "value",
-                "address": "value",
-                "email": "value"}}
+book = {}
 
 menu_selection = 0
 while menu_selection != 5:
@@ -20,13 +16,22 @@ while menu_selection != 5:
 
     while menu_selection == "1":
         print "Create Contact"
-        print "What is the name of the new contact?"
+        print "Name:"
         create_contact = raw_input('>')
-        print "Please enter %s's phone number:" % create_contact
+        print "Phone number:"
         create_phone = raw_input('>')
-        print "Please enter %s's alternative phone number:" % create_contact
+        print "Alternative phone number:"
         create_altPhone = raw_input('>')
-        print "Please enter %s's address:"
+        print "Address:"
+        create_address = raw_input('>')
+        print "Email:"
+        create_email = raw_input('>')
+        book = {create_contact: {"name": create_contact,
+                                 "phone": create_phone,
+                                 "alt phone": create_altPhone,
+                                 "address": create_address,
+                                 "email": create_email}}
+        print(book)
 
     while menu_selection == "2":
         print "Edit Contact"
