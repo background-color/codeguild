@@ -27,11 +27,18 @@ while menu_selection != 5:
         print "Email:"
         create_email = raw_input('>')
         book = {create_contact: {"name": create_contact,
-                                 "phone": create_phone,
-                                 "alt phone": create_altPhone,
-                                 "address": create_address,
-                                 "email": create_email}}
-        print(book)
+                                 " phone": create_phone,
+                                 " alt phone": create_altPhone,
+                                 " address": create_address,
+                                 " email": create_email}}
+        print book
+        print ""
+        print("Would you like to create another contact? (y,n)")
+        create_prompt = raw_input('>')
+        if create_prompt == 'y':
+            print "\n"
+        else:
+            break
 
     while menu_selection == "2":
         print "Edit Contact"
