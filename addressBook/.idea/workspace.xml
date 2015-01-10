@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c29490e0-b5a7-4df2-b4c2-b1548ec29733" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../fizzbuzz/DeckOfCards.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressBook.py" afterPath="$PROJECT_DIR$/addressBook.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fizzbuzz/fizzbuzz.py" afterPath="$PROJECT_DIR$/../fizzbuzz/fizzbuzz.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fizzbuzz/DeckOfCards.py" afterPath="$PROJECT_DIR$/../fizzbuzz/DeckOfCards.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" />
     </list>
     <ignored path="addressBook.iws" />
     <ignored path=".idea/workspace.xml" />

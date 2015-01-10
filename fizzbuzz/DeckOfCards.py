@@ -16,7 +16,8 @@ for i in suits:
                     "rank": j,
                     "color": color}}
         deck.update(d)
-print deck
+for cards in deck:
+    print(deck[cards])
 
 
 
