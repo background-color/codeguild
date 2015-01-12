@@ -32,8 +32,8 @@
       <file leaf-file-name="addressBook.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressBook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.48247424" vertical-offset="270" max-vertical-offset="2394">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.25979382" vertical-offset="270" max-vertical-offset="2394">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -390,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressBook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.48247424" vertical-offset="270" max-vertical-offset="2394">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.25979382" vertical-offset="270" max-vertical-offset="2394">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding />
         </state>
       </provider>
