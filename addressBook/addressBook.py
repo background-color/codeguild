@@ -19,6 +19,7 @@ while menu_selection != 5:
         print "Create Contact"
         print "Name:"
         create_contact = raw_input('>')
+# check if user exists, if yes prompt ' this will overwrite create_contact are you sure (y,n)'
         print "Phone number:"
         create_phone = raw_input('>')
         print "Alternative phone number:"
@@ -32,6 +33,7 @@ while menu_selection != 5:
                                  " alt phone": create_altPhone,
                                  " address": create_address,
                                  " email": create_email}}
+# reformat print book so that it looks pretty.
         print book
         print ""
         print("Would you like to create another contact? (y,n)")
@@ -57,14 +59,10 @@ while menu_selection != 5:
                 new_edit = raw_input('>')
                 book = {edit_field: new_edit}
                 print book
-                print "Would you like to edit another contact (e), return to main menu (r) or quit (q)? "
+                print "Would you like to edit another contact (y,n)"
                 continue_prompt = raw_input('>')
-                if continue_prompt == 'e':
+                if continue_prompt == 'y':
                     print "\n"
-                elif continue_prompt == 'q':
-                    print "Thanks for playing!"
-                    menu_selection = 5
-                    break
                 else:
                     break
 
