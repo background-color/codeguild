@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c29490e0-b5a7-4df2-b4c2-b1548ec29733" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fizzbuzz/DeckOfCards.py" afterPath="$PROJECT_DIR$/../fizzbuzz/DeckOfCards.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressBook.py" afterPath="$PROJECT_DIR$/addressBook.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="addressBook.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressBook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9257732" vertical-offset="1063" max-vertical-offset="2340">
-              <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+            <state vertical-scroll-proportion="-0.48247424" vertical-offset="270" max-vertical-offset="2394">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -302,7 +303,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421044413639</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Standardizes the check prompts in menu 3.">
+      <created>1421082853174</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1421082853174</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -347,7 +354,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Standardizes the continue prompt in menu_selection == 3.&#10;&#10;Added comments to sections that need work. &#10;&#10;I made a flow chart of how to make this program work using functions. This will be helpful when we learn about functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Standardizes the continue prompt in menu_selection == 3.&#10;&#10;Added comments to sections that need work. &#10;&#10;I made a flow chart of how to make this program work using functions. This will be helpful when we learn about functions." />
+    <MESSAGE value="Standardizes the check prompts in menu 3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Standardizes the check prompts in menu 3." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -382,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressBook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9257732" vertical-offset="1063" max-vertical-offset="2340">
-          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.48247424" vertical-offset="270" max-vertical-offset="2394">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
           <folding />
         </state>
       </provider>

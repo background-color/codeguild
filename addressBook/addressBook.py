@@ -14,7 +14,7 @@ while menu_selection != 5:
 
     menu_selection = raw_input(">")
 
-# create contact
+    # create contact
     while menu_selection == "1":
         print "Create Contact"
         print "Name:"
@@ -43,6 +43,8 @@ while menu_selection != 5:
         else:
             break
 
+# format menu 2 so that it matches the main menu.
+# list possible variables to edit as a numbered list with each possible variable.
     while menu_selection == "2":
         print "Edit Contact"
         print "Which contact would you like to edit?"
@@ -77,7 +79,8 @@ while menu_selection != 5:
         print "Which contact would you like to see?"
         contact_prompt = raw_input('>')
 # need a way to check that contact_prompt is valid.
-        print book[contact_prompt]
+        print(book[contact_prompt])
+        print("Name:" book[contact_prompt][create_contact])
         print "Would you like to view another contact? (y,n)"
         continue_prompt = raw_input('>')
         if continue_prompt == 'y':
