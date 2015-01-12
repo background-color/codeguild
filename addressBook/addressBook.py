@@ -14,6 +14,7 @@ while menu_selection != 5:
 
     menu_selection = raw_input(">")
 
+# create contact
     while menu_selection == "1":
         print "Create Contact"
         print "Name:"
@@ -72,29 +73,26 @@ while menu_selection != 5:
         else:
             break
 
-
+# view contacts
     while menu_selection == "3":
         print "View Contact"
         print "Which contact would you like to see?"
         contact_prompt = raw_input('>')
-        #need a way to check that contact_prompt is valid.
+# need a way to check that contact_prompt is valid.
         print book[contact_prompt]
-        print "Would you like to view another contact (v), return to main menu (r) or quit (q)? "
+        print "Would you like to view another contact? (y,n)"
         continue_prompt = raw_input('>')
-        if continue_prompt == 'r':
-            break
-        elif continue_prompt == 'q':
-            print "Thanks for playing!"
-            menu_selection = 5
-            break
-        else:
+        if continue_prompt == 'y':
             print "\n"
+        else:
+            break
 
-    # delete contact menu item
+# delete contact menu item
     while menu_selection == "4":
         print "Delete Contact"
         print "Which contact would you like to delete?"
         delete_prompt = raw_input('>')
+        # check that input is valid
         print "Are you sure you want to remove %s (y,n)" % delete_prompt
         delete_confirm = raw_input('>')
         if delete_confirm == 'y':
@@ -113,7 +111,7 @@ while menu_selection != 5:
             break
 
 
-    # quit menu item
+# quit menu item
     while menu_selection == "5":
         quit_confirm = raw_input("Are you sure you want to quit (y,n)?")
         if quit_confirm == 'y':
