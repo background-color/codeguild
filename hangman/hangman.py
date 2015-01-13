@@ -18,7 +18,7 @@ def print_menu():
 
 
 def print_hangman():
-    print('''
+    hangman = '''
             __________
             |/      |
             |      (_)
@@ -26,7 +26,8 @@ def print_hangman():
             |       |
             |      / \\
             |
-           _|__________''')
+           _|__________'''
+    return hangman
 
 
 def print_title():
@@ -44,6 +45,23 @@ def show_blanks():
     words = ('dog', 'cat')
     secret_word =  'dog'
     blanks = '_' * len(secret_word)
+    return blanks
 
 
-print blanks
+
+def show_missed_letters(missed_letters):
+    print('Missed Letters')
+    for letter in missed_letters:
+        return letter
+
+
+
+
+
+
+
+
+missed_letters = ['g, a, b']
+print print_hangman()
+print show_blanks()
+print show_missed_letters(missed_letters)
