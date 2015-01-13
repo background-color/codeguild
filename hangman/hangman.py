@@ -1,4 +1,28 @@
 __author__ = 'root'
+import random
+
+
+def print_title():
+    print('''
+       ___ ___    _____    _______    ________    _____      _____    _______
+      /   |   \  /  _  \   \      \  /  _____/   /     \    /  _  \   \      \\
+     /    ~    \/  /_\  \  /   |   \/   \  ___  /  \ /  \  /  /_\  \  /   |   \\
+     \    Y    /    |    \/    |    \    \_\  \/    Y    \/    |    \/    |    \\
+      \___|_  /\____|__  /\____|__  /\______  /\____|__  /\____|__  /\____|__  /
+        ''')
+
+
+def print_hangman():
+    hangman = '''
+            __________
+            |/      |
+            |      (_)
+            |      \|/
+            |       |
+            |      / \\
+            |
+           _|__________'''
+    return hangman
 
 
 def print_menu():
@@ -17,36 +41,9 @@ def print_menu():
             print_menu()
 
 
-def print_hangman():
-    hangman = '''
-            __________
-            |/      |
-            |      (_)
-            |      \|/
-            |       |
-            |      / \\
-            |
-           _|__________'''
-    return hangman
-
-
-def print_title():
-    print('''
-       ___ ___    _____    _______    ________    _____      _____    _______
-      /   |   \  /  _  \   \      \  /  _____/   /     \    /  _  \   \      \\
-     /    ~    \/  /_\  \  /   |   \/   \  ___  /  \ /  \  /  /_\  \  /   |   \\
-     \    Y    /    |    \/    |    \    \_\  \/    Y    \/    |    \/    |    \\
-      \___|_  /\____|__  /\____|__  /\______  /\____|__  /\____|__  /\____|__  /
-        ''')
-
-
-
-def show_blanks():
-    words = ('dog', 'cat')
-    secret_word =  'dog'
+def show_blanks(secret_word):
     blanks = '_' * len(secret_word)
     return blanks
-
 
 
 def show_missed_letters(missed_letters):
@@ -55,13 +52,43 @@ def show_missed_letters(missed_letters):
         return letter
 
 
+def guess_letter(secret_word, correct_letters, incorrect_letters):
+    guessed_letter= raw_input('Please enter a letter to guess: ')
+    if secret_word.__contains__(guessed_letter):
+        correct_letters.append(guessed_letter)
+        return
+    else:
+        incorrect_letters
+
+    return guessed_letter
 
 
+def random_word():
+    word_list = ['ant', 'zebra', 'greg', 'cheese', 'tree',
+                 'superb', 'brazil', 'jewelry', 'ant', 'baboon',
+                 'badger', 'bat', 'beaver', 'camel', 'cat',
+                 'clam', 'cobra', 'cougar', 'coyote', 'crow',
+                 'deer', 'dog', 'donkey', 'duck', 'eagle', 'ferret',
+                 'fox', 'frog', 'goat', 'goose', 'hawk', 'lion',
+                 'lizard', 'llama', 'mole', 'monkey', 'moose',
+                 'mouse', 'mule', 'newt', 'otter', 'owl', 'panda',
+                 'parrot', 'pigeon', 'python', 'rabbit', 'ram',
+                 'rat', 'raven', 'rhino', 'salmon', 'seal',
+                 'shark', 'sheep', 'skunk', 'sloth', 'snake',
+                 'spider', 'stork', 'swan', 'tiger', 'toad',
+                 'trout', 'turkey', 'turtle', 'weasel', 'whale',
+                 'wolf', 'wombat', 'zebra']
 
+    word = (random.choice(word_list))
+    return word
+moves_until_hang = 7
+secret_word = random_word()
+correct_letters = []
+incorrect_letters = []
+print(print_hangman())
+print(show_blanks(secret_word))
+print(secret_word)
+print guess_letter(secret_word)
 
-
-
-missed_letters = ['g, a, b']
-print print_hangman()
-print show_blanks()
-print show_missed_letters(missed_letters)
+# print show_missed_letters(missed_letters)
+# print(guess_letter())
