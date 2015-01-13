@@ -1,4 +1,6 @@
 __author__ = 'root'
+
+
 def print_menu():
     menu_choice = 'n'
     while menu_choice != 'y':
@@ -15,7 +17,29 @@ def print_menu():
             print_menu()
 
 
+def print_hangman():
+    print('''
+            __________
+            |/      |
+            |      (_)
+            |      \|/
+            |       |
+            |      / \\
+            |
+           _|__________''')
 
 
-print print_menu()
+def print_title():
+    print('''
+       ___ ___    _____    _______    ________    _____      _____    _______
+      /   |   \  /  _  \   \      \  /  _____/   /     \    /  _  \   \      \\
+     /    ~    \/  /_\  \  /   |   \/   \  ___  /  \ /  \  /  /_\  \  /   |   \\
+     \    Y    /    |    \/    |    \    \_\  \/    Y    \/    |    \/    |    \\
+      \___|_  /\____|__  /\____|__  /\______  /\____|__  /\____|__  /\____|__  /
+        ''')
+
+print(print_title())
+print(print_hangman())
+print(print_menu())
+
 
