@@ -38,8 +38,12 @@ def print_title():
       \___|_  /\____|__  /\____|__  /\______  /\____|__  /\____|__  /\____|__  /
         ''')
 
-print(print_title())
-print(print_hangman())
-print(print_menu())
 
 
+def show_blanks():
+    words = ('dog', 'cat')
+    secret_word =  'dog'
+    blanks = '_' * len(secret_word)
+
+
+print blanks

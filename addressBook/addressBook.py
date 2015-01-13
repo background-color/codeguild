@@ -1,6 +1,7 @@
 __author__ = 'root'
 
-def  main_menu():
+
+def main_menu():
     print "Welcome to Your Address Book"
     print "Please choose one of the following:"
     print "1. Create Contact"
@@ -9,7 +10,8 @@ def  main_menu():
     print "4. Delete Contact"
     print "5. Quit Address Book"
 
-def  sub_menu():
+
+def sub_menu():
     print '-' * 10
 
 
