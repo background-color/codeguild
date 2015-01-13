@@ -1,9 +1,6 @@
 __author__ = 'root'
 
-book = {}
-
-menu_selection = 0
-while menu_selection != 5:
+def  main_menu():
     print "Welcome to Your Address Book"
     print "Please choose one of the following:"
     print "1. Create Contact"
@@ -12,6 +9,15 @@ while menu_selection != 5:
     print "4. Delete Contact"
     print "5. Quit Address Book"
 
+def  sub_menu():
+    print '-' * 10
+
+
+book = {}
+
+menu_selection = 0
+while menu_selection != 5:
+    main_menu()
     menu_selection = raw_input(">")
 
     # create contact
@@ -80,7 +86,7 @@ while menu_selection != 5:
         contact_prompt = raw_input('>')
 # need a way to check that contact_prompt is valid.
         print(book[contact_prompt])
-        print("Name:" book[contact_prompt][create_contact])
+        #print("Name:" book[contact_prompt][create_contact])
         print "Would you like to view another contact? (y,n)"
         continue_prompt = raw_input('>')
         if continue_prompt == 'y':
