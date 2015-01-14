@@ -53,14 +53,13 @@ def show_missed_letters(missed_letters):
 
 
 def guess_letter(secret_word, correct_letters, incorrect_letters):
-    guessed_letter= raw_input('Please enter a letter to guess: ')
+    guessed_letter = raw_input('Please enter a letter to guess: ')
     if secret_word.__contains__(guessed_letter):
         correct_letters.append(guessed_letter)
-        return
+        return guessed_letter
     else:
-        incorrect_letters
-
-    return guessed_letter
+        incorrect_letters.append(guessed_letter)
+        return guessed_letter
 
 
 def random_word():
@@ -88,7 +87,8 @@ incorrect_letters = []
 print(print_hangman())
 print(show_blanks(secret_word))
 print(secret_word)
-print guess_letter(secret_word)
-
+print guess_letter(secret_word, correct_letters, incorrect_letters)
+print correct_letters
+print incorrect_letters
 # print show_missed_letters(missed_letters)
 # print(guess_letter())
