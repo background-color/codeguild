@@ -26,19 +26,16 @@ def print_hangman():
 
 
 def print_menu():
-    menu_choice = 'n'
-    while menu_choice != 'y':
-        menu_choice = raw_input("Hey, Would you like to play Hangman? (y,n) ")
-        if menu_choice == 'y' or menu_choice == 'Y' or menu_choice == 'yes':
-            return 'y'
-        elif menu_choice == 'n' or menu_choice == 'N' or menu_choice == 'no':
-            quit_menu = raw_input("Do you want to quit?")
-            if quit_menu == 'y' or menu_choice == 'Y' or menu_choice == 'yes':
-                print("Thanks for playing!")
+    print (30 * '-')
+    print ("   M A I N - M E N U")
+    print (30 * '-')
+    print ("1. Play Game")
+    print ("2. Rules")
+    print ("3. Quit Game")
+    print (30 * '-')
 
-            break
-        else:
-            print_menu()
+    menu_choice = raw_input('>')
+    return menu_choice
 
 
 def show_blanks(secret_word):
@@ -46,9 +43,10 @@ def show_blanks(secret_word):
     return blanks
 
 
-def guess_letter(correct_letters):
+def guess_letter(correct_letters, incorrect_letters, guessed_letter):
     # Inputs the letter from user and validates the letter.
-    while True:
+    check = True
+    while check == True:
         print('Please enter a letter to guess: ')
         guessed_letter = raw_input('>')
         guessed_letter = guessed_letter.lower()
@@ -63,6 +61,39 @@ def guess_letter(correct_letters):
         else:
             return guessed_letter
 
+
+def show_board(secret_word, guessed_letter, correct_letters, incorrect_letters, dog):
+
+
+    #print current_display_word
+    # these lines add letters to the correct_list or incorrect_list IF they aren't already there
+
+    for i in secret_word:
+        if i in guessed_letter:
+            if guessed_letter not in correct_letters and guessed_letter in secret_word:
+                correct_letters.append(guessed_letter)
+            else:
+                pass
+
+        else:
+            if guessed_letter not in incorrect_letters and guessed_letter not in secret_word:
+                incorrect_letters.append(guessed_letter)
+            else:
+                pass
+    for i in enumerate(secret_word):
+        if i[1] == guessed_letter:
+            offset = i[0]
+            current_display_word[offset] = guessed_letter
+
+    print "".join(current_display_word)
+    print "Correct guesses:"
+    print correct_letters
+    print "Incorrect guesses:"
+    print incorrect_letters
+    if '_' not in current_display_word:
+        print('WINNER, WINNER, CHICKEN DINNER!!!!')
+        dog = '5'
+        return dog
 
 
 def random_word():
@@ -116,24 +147,34 @@ def play_again():
 
 
 moves_until_hang = 7
-secret_word = random_word()
-correct_letters = ['a']
-incorrect_letters = ['b']
+correct_letters = []
+incorrect_letters = []
+guessed_letter = ''
+play = True
+win_condition = ''
+dog = ''
+while play == True:
+
+    print_title()
+    print(print_hangman())
+    menu_option = print_menu()
+    secret_word = random_word()
+    current_display_word = list(len(secret_word) * "_")
 
 
-print guess_letter(correct_letters)
+    while menu_option == '1':
 
-'''while True:
-    #print display_board(secret_word, correct_letters, incorrect_letters)
-    for i in range(len(incorrect_letters)):
-        print i
-        if i >= moves_until_hang:
-            print('Your hangman has hung')
-            play_again()
-'''
-'''print(print_hangman())
-print(show_blanks(secret_word))
-print(secret_word)
-print guess_letter(secret_word, correct_letters, incorrect_letters)
-print correct_letters
-print incorrect_letters'''
+        print secret_word
+
+
+
+        show_board(secret_word, guessed_letter, correct_letters, incorrect_letters, dog)
+        if dog == '5':
+            break
+        guessed_letter = guess_letter(correct_letters, incorrect_letters, guessed_letter)
+
+
+
+
+
+
