@@ -46,13 +46,14 @@ def show_blanks(secret_word):
     return blanks
 
 
-def show_missed_letters(missed_letters):
-    print('Missed Letters')
-    for letter in missed_letters:
+def show_incorrect_letters(incorrect_letters):
+    print('Incorrect Letters')
+    for letter in incorrect_letters:
         return letter
 
 
 def guess_letter(secret_word, correct_letters, incorrect_letters):
+    # Inputs the letter from user and sorts it into correct or incorrect letter list.
     guessed_letter = raw_input('Please enter a letter to guess: ')
     if secret_word.__contains__(guessed_letter):
         correct_letters.append(guessed_letter)
@@ -89,6 +90,6 @@ print(show_blanks(secret_word))
 print(secret_word)
 print guess_letter(secret_word, correct_letters, incorrect_letters)
 print correct_letters
-print incorrect_letters
+
 # print show_missed_letters(missed_letters)
 # print(guess_letter())
