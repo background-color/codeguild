@@ -46,21 +46,15 @@ def show_blanks(secret_word):
     return blanks
 
 
-def show_incorrect_letters(incorrect_letters):
-    print('Incorrect Letters')
-    for letter in incorrect_letters:
-        return letter
-
-
 def guess_letter(secret_word, correct_letters, incorrect_letters):
     # Inputs the letter from user and sorts it into correct or incorrect letter list.
     guessed_letter = raw_input('Please enter a letter to guess: ')
     if secret_word.__contains__(guessed_letter):
         correct_letters.append(guessed_letter)
-        return guessed_letter
+        return ""
     else:
         incorrect_letters.append(guessed_letter)
-        return guessed_letter
+        return ""
 
 
 def random_word():
@@ -81,15 +75,42 @@ def random_word():
 
     word = (random.choice(word_list))
     return word
+
+
+def display_board(secret_word, correct_letters, incorrect_letters):
+    guessed_letter = raw_input('Please enter a letter to guess: ')
+    current_display_word = ''
+    for i in secret_word:
+        if i in guessed_letter:
+            l =  current_display_word + guessed_letter
+            current_display_word = current_display_word + guessed_letter
+            if guessed_letter not in correct_letters and guessed_letter in secret_word:
+                correct_letters.append(guessed_letter)
+            else:
+                pass
+
+        else:
+            current_display_word += '_'
+            if guessed_letter not in incorrect_letters and guessed_letter not in secret_word:
+                incorrect_letters.append(guessed_letter)
+            else:
+                pass
+
+    print current_display_word
+    print correct_letters
+    print incorrect_letters
+
+
 moves_until_hang = 7
 secret_word = random_word()
 correct_letters = []
 incorrect_letters = []
-print(print_hangman())
+while True:
+    print display_board(secret_word, correct_letters, incorrect_letters)
+
+'''print(print_hangman())
 print(show_blanks(secret_word))
 print(secret_word)
 print guess_letter(secret_word, correct_letters, incorrect_letters)
 print correct_letters
-
-# print show_missed_letters(missed_letters)
-# print(guess_letter())
+print incorrect_letters'''

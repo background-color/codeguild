@@ -30,13 +30,14 @@
       <file leaf-file-name="hangman.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hangman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30097088" vertical-offset="272" max-vertical-offset="1224">
-              <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.03640777" vertical-offset="759" max-vertical-offset="1296">
+              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
               <folding>
                 <element signature="e#59#483#0" expanded="false" />
                 <element signature="e#511#721#0" expanded="false" />
                 <element signature="e#746#1290#0" expanded="false" />
                 <element signature="e#1327#1376#0" expanded="false" />
+                <element signature="e#1815#2731#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,6 +84,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -103,7 +105,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,7 +330,25 @@
       <option name="project" value="LOCAL" />
       <updated>1421184334561</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="I'm lost in what this commit does. &#10;&#10;Get a log to go next to my computer to keep track of what is going on. Also, commit at the end of every testing sequence.">
+      <created>1421193367281</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1421193367281</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Creates function guess_letter which inputs the letter from user and sorts it into correct or incorrect letter list.&#10;&#10;Work on commenting properly.">
+      <created>1421193871500</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1421193871500</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes function missed_letter to incorrect_letter to keep syntax straight.">
+      <created>1421194066050</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1421194066050</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -338,24 +357,24 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -377,24 +396,28 @@
     <MESSAGE value="Creates 'HANGMAN' ASCII art and the HANGMAN ASCII art.&#10;&#10;This makes the game more fun and adds to user experience." />
     <MESSAGE value="New function show_blanks added.  show_blanks finds the length of the secret_word and returns a number  underscores equal to the number of  letters in secret_word.&#10;&#10;This function eventually needs to import the word_list and select a random word to be the secret_word." />
     <MESSAGE value="Creates show_missed_letters function. The function returns the missed letters." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates show_missed_letters function. The function returns the missed letters." />
+    <MESSAGE value="I'm lost in what this commit does. &#10;&#10;Get a log to go next to my computer to keep track of what is going on. Also, commit at the end of every testing sequence." />
+    <MESSAGE value="Creates function guess_letter which inputs the letter from user and sorts it into correct or incorrect letter list.&#10;&#10;Work on commenting properly." />
+    <MESSAGE value="Changes function missed_letter to incorrect_letter to keep syntax straight." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes function missed_letter to incorrect_letter to keep syntax straight." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hangman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#59#483#0" expanded="false" />
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -408,6 +431,7 @@
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,6 +445,21 @@
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#59#483#0" expanded="false" />
+            <element signature="e#511#721#0" expanded="false" />
+            <element signature="e#746#1290#0" expanded="false" />
+            <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -434,6 +473,7 @@
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -447,6 +487,7 @@
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -460,19 +501,21 @@
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hangman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30097088" vertical-offset="272" max-vertical-offset="1224">
-          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.03640777" vertical-offset="759" max-vertical-offset="1296">
+          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
           <folding>
             <element signature="e#59#483#0" expanded="false" />
             <element signature="e#511#721#0" expanded="false" />
             <element signature="e#746#1290#0" expanded="false" />
             <element signature="e#1327#1376#0" expanded="false" />
+            <element signature="e#1815#2731#0" expanded="false" />
           </folding>
         </state>
       </provider>
