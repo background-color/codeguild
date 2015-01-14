@@ -2,7 +2,7 @@ __author__ = 'root'
 import random
 
 
-def print_title():
+def print_menu():
     print('''
        ___ ___    _____    _______    ________    _____      _____    _______
       /   |   \  /  _  \   \      \  /  _____/   /     \    /  _  \   \      \\
@@ -11,8 +11,6 @@ def print_title():
       \___|_  /\____|__  /\____|__  /\______  /\____|__  /\____|__  /\____|__  /
         ''')
 
-
-def print_hangman():
     hangman = '''
             __________
             |/      |
@@ -22,10 +20,8 @@ def print_hangman():
             |      / \\
             |
            _|__________'''
-    return hangman
+    print hangman
 
-
-def print_menu():
     print (30 * '-')
     print ("   M A I N - M E N U")
     print (30 * '-')
@@ -36,6 +32,8 @@ def print_menu():
 
     menu_choice = raw_input('>')
     return menu_choice
+
+
 
 
 def show_blanks(secret_word):
@@ -153,25 +151,36 @@ guessed_letter = ''
 play = True
 win_condition = ''
 dog = ''
-while play == True:
+menu_option = '1'
 
+
+def display_menu():
     print_title()
-    print(print_hangman())
-    menu_option = print_menu()
+    print_hangman()
+
+
+def initialize_game():
     secret_word = random_word()
     current_display_word = list(len(secret_word) * "_")
+    return secret_word, current_display_word
+
+display_menu()
+initialize_game()
+
+while menu_option == '1':
+
+    print secret_word
 
 
-    while menu_option == '1':
-
-        print secret_word
-
-
-
+    if '_' not in current_display_word:
+        print('WINNER, WINNER, CHICKEN DINNER!!!!')
+        play = False
+    else:
         show_board(secret_word, guessed_letter, correct_letters, incorrect_letters, dog)
-        if dog == '5':
-            break
         guessed_letter = guess_letter(correct_letters, incorrect_letters, guessed_letter)
+
+
+
 
 
 
