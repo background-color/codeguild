@@ -46,15 +46,23 @@ def show_blanks(secret_word):
     return blanks
 
 
-def guess_letter(secret_word, correct_letters, incorrect_letters):
-    # Inputs the letter from user and sorts it into correct or incorrect letter list.
-    guessed_letter = raw_input('Please enter a letter to guess: ')
-    if secret_word.__contains__(guessed_letter):
-        correct_letters.append(guessed_letter)
-        return ""
-    else:
-        incorrect_letters.append(guessed_letter)
-        return ""
+def guess_letter(correct_letters):
+    # Inputs the letter from user and validates the letter.
+    while True:
+        print('Please enter a letter to guess: ')
+        guessed_letter = raw_input('>')
+        guessed_letter = guessed_letter.lower()
+        if len(guessed_letter) != 1:
+            print('Slow down Romeo, one letter at a time!')
+        elif guessed_letter in correct_letters:
+            print("That's a good guess, unfortunately you've already guessed that one!")
+        elif guessed_letter in incorrect_letters:
+            print("That's not a good guess, fortunately you've already guessed that one!")
+        elif guessed_letter not in 'abcdefghijklmnopqrstuvwxyz':
+            print('What kind of word do you think this is? Letters only, thank you!!')
+        else:
+            return guessed_letter
+
 
 
 def random_word():
@@ -97,17 +105,32 @@ def display_board(secret_word, correct_letters, incorrect_letters):
                 pass
 
     print current_display_word
+
     print correct_letters
     print incorrect_letters
 
 
+def play_again():
+    print('Do you want to play again? (yes or no)')
+    return input().lower().startswith('y')
+
+
 moves_until_hang = 7
 secret_word = random_word()
-correct_letters = []
-incorrect_letters = []
-while True:
-    print display_board(secret_word, correct_letters, incorrect_letters)
+correct_letters = ['a']
+incorrect_letters = ['b']
 
+
+print guess_letter(correct_letters)
+
+'''while True:
+    #print display_board(secret_word, correct_letters, incorrect_letters)
+    for i in range(len(incorrect_letters)):
+        print i
+        if i >= moves_until_hang:
+            print('Your hangman has hung')
+            play_again()
+'''
 '''print(print_hangman())
 print(show_blanks(secret_word))
 print(secret_word)
