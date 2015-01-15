@@ -29,8 +29,22 @@ def print_menu():
 
     menu_choice = raw_input('>')
     return menu_choice
-menu_choice = print_menu()
-print(menu_choice)
 
-if menu_choice == '1':
-    print('I hate python')
+game = True
+while game:
+    menu_choice = print_menu()
+    if menu_choice == '1':
+        print('g')
+    elif menu_choice =='2':
+        print('THE RULES:::')
+        print('_' * 30)
+        print(''' The Computer acts as executioner and YOU, the player are to be executed.
+    You have one last chance at a stay of execution. Guess the word before you run out of
+    body parts. Good Luck!!!''')
+        print ('_' * 30)
+        any_key = raw_input('Press any key to continue')
+        if any_key:
+            break
+    elif menu_choice == '3':
+        print('Thanks For Playing!!!')
+        game = False

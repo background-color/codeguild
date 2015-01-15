@@ -34,8 +34,6 @@ def print_menu():
     return menu_choice
 
 
-
-
 def show_blanks(secret_word):
     blanks = '_' * len(secret_word)
     return blanks
@@ -114,34 +112,9 @@ def random_word():
     return word
 
 
-def display_board(secret_word, correct_letters, incorrect_letters):
-    guessed_letter = raw_input('Please enter a letter to guess: ')
-    current_display_word = ''
-    for i in secret_word:
-        if i in guessed_letter:
-            l =  current_display_word + guessed_letter
-            current_display_word = current_display_word + guessed_letter
-            if guessed_letter not in correct_letters and guessed_letter in secret_word:
-                correct_letters.append(guessed_letter)
-            else:
-                pass
-
-        else:
-            current_display_word += '_'
-            if guessed_letter not in incorrect_letters and guessed_letter not in secret_word:
-                incorrect_letters.append(guessed_letter)
-            else:
-                pass
-
-    print current_display_word
-
-    print correct_letters
-    print incorrect_letters
 
 
-def play_again():
-    print('Do you want to play again? (yes or no)')
-    return input().lower().startswith('y')
+
 
 
 moves_until_hang = 7
