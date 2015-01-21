@@ -1,4 +1,8 @@
 __author__ = 'root'
+# Initializing colorama for Windows machines (gotta think about everyone).
+from colorama import init
+init()
+from colorama import Fore, Back, Style
 # imports argument variable (argv) from module sys
 #from sys import argv
 
@@ -28,17 +32,19 @@ class AddressBook(object):
 
 class Contacts(object):
 
-    def __init__(self, name, phone, alt_phone, address, email):
+    def __init__(self, name, last_name, phone, alt_phone, address, email):
         self.name = name
+        self.last_name = last_name
         self.phone = phone
         self.alt_phone = alt_phone
         self.address = address
         self.email = email
 
     def display(self):
-        print('-' * 30)
-        print (self.name.upper())
-
+        print(Fore.RED + '-' * 30)
+        print(Fore.WHITE + Style.BRIGHT + self.name.upper())
+        print(Fore.RED + '-' * 30)
+        print('Full Name: %s %s' % name, last_name)
         """
         show all instance attributes
         """
@@ -79,10 +85,6 @@ def main_menu():
         print('Thanks for playing')
 
 
-
-
-menu_selection = main_menu()
-print menu_selection
 
 
 '''
