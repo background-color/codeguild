@@ -1,12 +1,32 @@
 __author__ = 'root'
 # imports argument variable (argv) from module sys
-from sys import argv
+#from sys import argv
 
 # unpacks the passed in script and assigns it to <filename>
-script, filename = argv
+#script, filename = argv
 
+# This class stores the address book
+class AddressBook(object):
+    def __init__(self, owner):
+        self.owner = owner
+        self.list_of_contacts = [contact.name]
+    def display_all_contacts(self):
+        """
+        show all contact objects
+        """
 
-class Person(object):
+    def create_contact(self):
+        """
+        create new contact objects from Contact class
+        """
+
+    def delete_contact(self):
+        """
+        select an exiting contact object
+        delete the selected contact object
+        """
+
+class Contacts(object):
 
     def __init__(self, name, phone, alt_phone, address, email):
         self.name = name
@@ -15,6 +35,19 @@ class Person(object):
         self.address = address
         self.email = email
 
+    def display(self):
+        print('-' * 30)
+        print (self.name.upper())
+
+        """
+        show all instance attributes
+        """
+
+    def edit(self):
+        """
+        show current instance attribute values
+        allow for editing of those values
+        """
 
 '''Person.name = raw_input('please enter a name: ')
 print(Person.name)
@@ -40,7 +73,7 @@ def main_menu():
     print '-' * 30
 
     selection = raw_input('Enter your choice: ')
-
+    if selection == '5':
         return selection
     elif selection == '2':
         print('Thanks for playing')
