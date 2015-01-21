@@ -124,21 +124,18 @@ guessed_letter = ''
 play = True
 win_condition = ''
 dog = ''
-menu_option = '1'
+menu_option = ''
+secret_word = ''
+current_display_word  = []
 
 
-def display_menu():
-    print_title()
-    print_hangman()
-
-
-def initialize_game():
+def initialize_game(secret_word, current_display_word):
     secret_word = random_word()
     current_display_word = list(len(secret_word) * "_")
     return secret_word, current_display_word
 
-display_menu()
-initialize_game()
+print_menu()
+initialize_game(secret_word, current_display_word)
 
 while menu_option == '1':
 

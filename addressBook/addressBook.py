@@ -1,7 +1,35 @@
 __author__ = 'root'
+# imports argument variable (argv) from module sys
+from sys import argv
 
+# unpacks the passed in script and assigns it to <filename>
+script, filename = argv
+
+
+class Person(object):
+
+    def __init__(self, name, phone, alt_phone, address, email):
+        self.name = name
+        self.phone = phone
+        self.alt_phone = alt_phone
+        self.address = address
+        self.email = email
+
+
+'''Person.name = raw_input('please enter a name: ')
+print(Person.name)
+Person.phone = raw_input('please enter a phone number: ')
+print(Person.phone)
+Person.alt_phone = raw_input('please enter an alt phone number: ')
+print(Person.alt_phone)
+Person.address = raw_input('please enter an address: ')
+print(Person.address)
+Person.email = raw_input('please enter an email: ')
+print(Person.email)
+'''
 
 def main_menu():
+    print '-' * 30
     print "Welcome to Your Address Book"
     print "Please choose one of the following:"
     print "1. Create Contact"
@@ -9,8 +37,22 @@ def main_menu():
     print "3. View Contact"
     print "4. Delete Contact"
     print "5. Quit Address Book"
+    print '-' * 30
+
+    selection = raw_input('Enter your choice: ')
+
+        return selection
+    elif selection == '2':
+        print('Thanks for playing')
 
 
+
+
+menu_selection = main_menu()
+print menu_selection
+
+
+'''
 def sub_menu():
     print '-' * 10
 
@@ -131,5 +173,5 @@ while menu_selection != 5:
             break
 
     if menu_selection == "5":
-        break
+        break'''
 
