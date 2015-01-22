@@ -13,7 +13,8 @@ from colorama import Fore, Back, Style
 class AddressBook(object):
     def __init__(self, owner):
         self.owner = owner
-        self.list_of_contacts = [contact.name]
+       # self.list_of_contacts = [contact.name]
+
     def display_all_contacts(self):
         """
         show all contact objects
@@ -30,6 +31,7 @@ class AddressBook(object):
         delete the selected contact object
         """
 
+
 class Contacts(object):
 
     def __init__(self, name, last_name, phone, alt_phone, address, email):
@@ -44,7 +46,19 @@ class Contacts(object):
         print(Fore.RED + '-' * 30)
         print(Fore.WHITE + Style.BRIGHT + self.name.upper())
         print(Fore.RED + '-' * 30)
-        print('Full Name: %s %s' % name, last_name)
+        print(Fore.WHITE + 'Full Name: %s %s' % self.name, self.last_name)
+        print(Fore.RED + '-' * 30)
+        print(Fore.WHITE + 'Phone Number: %s' % self.phone)
+        print(Fore.RED + '-' * 30)
+        print(Fore.WHITE + 'Alt. Phone: % s' % self.alt_phone)
+        print(Fore.RED + '-' * 30)
+        # TODO: multiple lines for address??
+        print(Fore.WHITE + 'Address: % s' % self.address)
+        print(Fore.RED + '-' * 30)
+        print('Email: %s' % email)
+        print(Fore.RED + '-' * 30)
+        print(Style.RESET_ALL())
+
         """
         show all instance attributes
         """
@@ -55,17 +69,7 @@ class Contacts(object):
         allow for editing of those values
         """
 
-'''Person.name = raw_input('please enter a name: ')
-print(Person.name)
-Person.phone = raw_input('please enter a phone number: ')
-print(Person.phone)
-Person.alt_phone = raw_input('please enter an alt phone number: ')
-print(Person.alt_phone)
-Person.address = raw_input('please enter an address: ')
-print(Person.address)
-Person.email = raw_input('please enter an email: ')
-print(Person.email)
-'''
+
 
 def main_menu():
     print '-' * 30
@@ -85,8 +89,12 @@ def main_menu():
         print('Thanks for playing')
 
 
+new_person = AddressBook('Gregg')
+print new_person.owner
 
-
+new_person2 = Contacts('Gregg', 'Abbott', '808-280-3799', '503-946-6544',
+                       '1631 SE 59th', 'gregg.abbott@gmail.com')
+new_person2.display()
 '''
 def sub_menu():
     print '-' * 10
@@ -210,3 +218,14 @@ while menu_selection != 5:
     if menu_selection == "5":
         break'''
 
+'''Person.name = raw_input('please enter a name: ')
+print(Person.name)
+Person.phone = raw_input('please enter a phone number: ')
+print(Person.phone)
+Person.alt_phone = raw_input('please enter an alt phone number: ')
+print(Person.alt_phone)
+Person.address = raw_input('please enter an address: ')
+print(Person.address)
+Person.email = raw_input('please enter an email: ')
+print(Person.email)
+'''
