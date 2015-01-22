@@ -8,7 +8,7 @@ from colorama import Fore, Back, Style
 #from sys import argv
 
 # unpacks the passed in script and assigns it to <filename>
-#script, filename = argv
+# script, filename = argv
 
 # Creates an object to store our address books. Module to display all contacts
 class AddressBook(object):
@@ -19,13 +19,11 @@ class AddressBook(object):
     def display_all_contacts(self):
         for key in self.list_of_contacts:
             print key
-        #print(gregs_contacts.list_of_contacts.keys())
-
 
     def create_contact(self):
-        """
-        create new contact objects from Contact class
-        """
+        self.list_of_contacts [] =
+        # TODO: create new contact objects from Contact class
+
 
     def delete_contact(self):
         """
@@ -48,20 +46,20 @@ class Contacts(object):
     def display(self):
         print(Fore.RED + '-' * 30)
         print(Fore.WHITE + Style.BRIGHT + "%s %s" % (self.name.upper(), self.last_name.upper()))
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         print(Fore.WHITE + 'First Name: %s' % self.name)
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         print(Fore.WHITE + 'Last Name: %s' % self.last_name)
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         print(Fore.WHITE + 'Phone Number: %s' % self.phone)
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         print(Fore.WHITE + 'Alt. Phone: % s' % self.alt_phone)
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         #TODO: multiple lines for address??
         print(Fore.WHITE + 'Address: % s' % self.address)
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         print(Fore.WHITE + 'Email: %s' % self.email)
-        print(Fore.RED + '-' * 30)
+        print(Fore.RED + Style.BRIGHT + '-' * 30)
         print(Fore.WHITE + "")
 
         """
@@ -76,22 +74,49 @@ class Contacts(object):
 
 
 
-def main_menu():
-    print(Fore.RED + '-' * 30)
-    print "Welcome to Your Address Book"
-    print "Please choose one of the following:"
-    print "1. Create Contact"
-    print "2. Edit Contact"
-    print "3. View Contact"
-    print "4. Delete Contact"
-    print "5. Quit Address Book"
-    print(Fore.RED + '-' * 30)
+def main_menu(address_book_owner):
 
-    selection = raw_input('What would you like to do? (1-5): ')
-    if selection == '5':
-        return selection
-    elif selection == '2':
-        print('Thanks for playing')
+    fg = Fore.GREEN
+    fr = Fore.RED
+    sra = Style.RESET_ALL
+    while True:
+        print(Fore.RED + Style.BRIGHT + '-' * 30 + Style.RESET_ALL)
+        print "Welcome to Your Address Book"
+        print "Please choose one of the following:"
+        print "1. List All Contacts"
+        print "2. View Individual Contact"
+        print "3. Create New Contact"
+        print "4. Edit Contact"
+        print "5. Delete Contact"
+        print "6. Quit Address Book"
+        print(Fore.RED + Style.BRIGHT + '-' * 30 + Style.RESET_ALL)
+
+        selection = raw_input(Fore.GREEN + 'What would you like to do? (1-6): ' + Style.RESET_ALL)
+        if not selection.isdigit():
+            print(Fore.RED + Style.BRIGHT + "DANGER DANGER!!!  That is an invalid selection, 1-6 ONLY!!")
+        elif selection.isdigit():
+            selection = int(selection)
+            if selection > 6 or selection < 1:
+                print(Fore.RED + Style.BRIGHT + "DANGER DANGER!!!  That is an invalid selection 1-6 ONLY!! second one")
+            elif selection == 1:
+                print(address_book_owner.display_all_contacts())
+                # TODO: Give user the ability to choose one contact to display.
+                test = raw_input(Fore.GREEN + 'Press any key to continue: ')
+            elif selection == 2:
+                print(Fore.GREEN + 'View Individual Contact: \n')
+                # TODO: Prmompt user for which contact and assign that to test_contact.
+                # MVP individual_contact = raw_input('Which contact would you like to see?')
+                # TODO: Figure out why this returns none as well.
+                print(test_contact.display())
+                test = raw_input(Fore.GREEN + 'Press any key to continue: ')
+            elif selection == 3:
+                print(Fore.GREEN + 'Create New Contact' + Style.RESET_ALL)
+                first_name = raw_input(fg + 'Please enter the first name of your contact: ')
+                last_name = raw_input(fg + 'Please enter the last name of your contact: ')
+
+            elif selection == 6:
+                print(Fore.RED + 'Thanks for playing')
+                break
 
 
 gregs_contacts = AddressBook('Gregg')
@@ -101,11 +126,16 @@ test_contact = Contacts('Gregg', 'Abbott', '808-280-3799', '503-946-6544',
                        '1631 SE 59th', 'gregg.abbott@gmail.com')
 
 gregs_contacts.list_of_contacts[test_contact.full_name] = test_contact
+main_menu(gregs_contacts)
+
+
+
+'''
 
 test_contact.display()
 #print(gregs_contacts.list_of_contacts.keys())
 gregs_contacts.display_all_contacts()
-
+'''
 
 '''
 def sub_menu():
