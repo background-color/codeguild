@@ -3,22 +3,24 @@ __author__ = 'root'
 from colorama import init
 init()
 from colorama import Fore, Back, Style
+
 # imports argument variable (argv) from module sys
 #from sys import argv
 
 # unpacks the passed in script and assigns it to <filename>
 #script, filename = argv
 
-# This class stores the address book
+# Creates an object to store our address books. Module to display all contacts
 class AddressBook(object):
     def __init__(self, owner):
         self.owner = owner
-       # self.list_of_contacts = [contact.name]
+        self.list_of_contacts = {}
 
     def display_all_contacts(self):
-        """
-        show all contact objects
-        """
+        for key in self.list_of_contacts:
+            print key
+        #print(gregs_contacts.list_of_contacts.keys())
+
 
     def create_contact(self):
         """
@@ -41,23 +43,26 @@ class Contacts(object):
         self.alt_phone = alt_phone
         self.address = address
         self.email = email
+        self.full_name = self.name + " " + self.last_name
 
     def display(self):
         print(Fore.RED + '-' * 30)
-        print(Fore.WHITE + Style.BRIGHT + self.name.upper())
+        print(Fore.WHITE + Style.BRIGHT + "%s %s" % (self.name.upper(), self.last_name.upper()))
         print(Fore.RED + '-' * 30)
-        print(Fore.WHITE + 'Full Name: %s %s' % self.name, self.last_name)
+        print(Fore.WHITE + 'First Name: %s' % self.name)
+        print(Fore.RED + '-' * 30)
+        print(Fore.WHITE + 'Last Name: %s' % self.last_name)
         print(Fore.RED + '-' * 30)
         print(Fore.WHITE + 'Phone Number: %s' % self.phone)
         print(Fore.RED + '-' * 30)
         print(Fore.WHITE + 'Alt. Phone: % s' % self.alt_phone)
         print(Fore.RED + '-' * 30)
-        # TODO: multiple lines for address??
+        #TODO: multiple lines for address??
         print(Fore.WHITE + 'Address: % s' % self.address)
         print(Fore.RED + '-' * 30)
-        print('Email: %s' % email)
+        print(Fore.WHITE + 'Email: %s' % self.email)
         print(Fore.RED + '-' * 30)
-        print(Style.RESET_ALL())
+        print(Fore.WHITE + "")
 
         """
         show all instance attributes
@@ -72,7 +77,7 @@ class Contacts(object):
 
 
 def main_menu():
-    print '-' * 30
+    print(Fore.RED + '-' * 30)
     print "Welcome to Your Address Book"
     print "Please choose one of the following:"
     print "1. Create Contact"
@@ -80,21 +85,28 @@ def main_menu():
     print "3. View Contact"
     print "4. Delete Contact"
     print "5. Quit Address Book"
-    print '-' * 30
+    print(Fore.RED + '-' * 30)
 
-    selection = raw_input('Enter your choice: ')
+    selection = raw_input('What would you like to do? (1-5): ')
     if selection == '5':
         return selection
     elif selection == '2':
         print('Thanks for playing')
 
 
-new_person = AddressBook('Gregg')
-print new_person.owner
+gregs_contacts = AddressBook('Gregg')
+print gregs_contacts.owner
 
-new_person2 = Contacts('Gregg', 'Abbott', '808-280-3799', '503-946-6544',
+test_contact = Contacts('Gregg', 'Abbott', '808-280-3799', '503-946-6544',
                        '1631 SE 59th', 'gregg.abbott@gmail.com')
-new_person2.display()
+
+gregs_contacts.list_of_contacts[test_contact.full_name] = test_contact
+
+test_contact.display()
+#print(gregs_contacts.list_of_contacts.keys())
+gregs_contacts.display_all_contacts()
+
+
 '''
 def sub_menu():
     print '-' * 10
