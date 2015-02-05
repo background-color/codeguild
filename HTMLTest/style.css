@@ -5,6 +5,7 @@ body {
     background-color: #ffc;
     margin: 20px;
     padding: 0;
+
 }
 
 /* This is a comment*/
@@ -22,6 +23,7 @@ h1 {
     border-bottom-style: solid;
     border-bottom-width: 0.5em;
     border-bottom-color: #c00
+
 }
 
 h2 {
@@ -31,30 +33,38 @@ h2 {
     margin: 0;
     padding: 2px;
     padding-left: 14px;
+
 }
 
 h3 {
     color: #999;
     font-size: 1.25em;
+
 }
 
 img {
     border-style: dashed;
     border-width: 2px;
     border-color: #ccc;
+
 }
 
 a {
     text-decortation: none;
+
 }
 
 strong {
     font-style: italic;
     text-transform: uppercase;
+
 }
 
-p {
-    line-height: 21px;
+li {
+    color: #900;
+    font-style: italic;
+    
 }
+
 
 
