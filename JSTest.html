@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test</title>
+		<script>
+		function calculate(evt){
+			var frm = document.getElementById('calcform');
+			var aValue = parseInt(frm.input_a.value);
+			var bValue =  parseInt(frm.input_b.value);
+			answer = [aValue, bValue]
+			console.log(answer)
+
+			switch(evt.target.name){
+				case 'addbutton':
+					sp = document.getElementById('result');
+					sp.innerHTML = aValue + bValue;
+					break;
+				case 'subtractButton':
+					sp = document.getElementById('result');
+					sp.innerHTML = aValue - bValue;
+					break;
+			}
+		}
+			
+		document.addEventListener('DOMContentLoaded', function(event){
+
+			var frm = document.getElementById('buttonCollection');
+			buttonCollection.onclick = calculate;
+
+
+			//frm.button.onclick = function(evt) {
+				
+				 
+
+				//};
+			//}
+
+		})
+			
+
+		</script>
+	</head>
+	<body>
+
+		<form id="calcform" name="calculator" method='post'>
+			<p>Number: <input type='text' name="input_a" size="10"></p>
+			<p>Number: <input type='text' name="input_b" size="10"></p>
+			<div id = 'buttonCollection'>
+				<p>
+					<input type="button" name="addbutton" value="add">
+				</p>
+				<p>
+				<input type="button" name="subtractButton" value="subtract">
+				</p>
+			</div>
+			<p>
+				<input type="reset" name="Reset Form" value="clearbutton">
+			</p>
+			<p>Result: <span id='result'></span></p>
+		</form>
+
+	
+	</body>
+</html>
